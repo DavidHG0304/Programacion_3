@@ -46,43 +46,41 @@ public class Ventana extends JFrame{
 		boton.setBounds(100, 600, 370, 50);
 		panel.add(boton);
 		
-		panel.addMouseListener(new MouseAdapter() {
-			
+		boton.addActionListener(new ActionListener() {
+					
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				int ejeX = e.getX();
-				int ejeY = e.getY();
-				System.out.println(ejeX);
-				System.out.println(ejeY);
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource() == boton) {
+					JButton botonAleatorio = new JButton();
+						
+					int randRojo = (int) (Math.random() * 255);
+					int randVerde = (int) (Math.random() * 255);
+					int randAzul = (int) (Math.random() * 255);
+							
+					botonAleatorio.setBackground(new Color(randRojo,randVerde, randAzul));
+		
+					int ejeX = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
+					int ejeY = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
+					int tamanioAleatorio = (int)(Math.random() * (200 - 100)) + 100;					
+					botonAleatorio.setBounds(ejeX, ejeY, tamanioAleatorio, tamanioAleatorio);
+					String codigoHexaColor = String.format("#%02x%02x%02x", randRojo, randVerde, randAzul);
+					botonAleatorio.setText(codigoHexaColor);
+					
+					botonAleatorio.addActionListener(new ActionListener() {
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							if(e.getSource() == botonAleatorio) {
+								panel.remove(botonAleatorio);								
+								panel.repaint();
+							}
+						}
+					});
+							
+					panel.add(botonAleatorio);
+				}
 				
-				JButton botonAleatorio = new JButton();
-				int randRojo = (int) (Math.random() * 255);
-				int randVerde = (int) (Math.random() * 255);
-				int randAzul = (int) (Math.random() * 255);
-				botonAleatorio.setBackground(new Color(randRojo,randVerde, randAzul));
-				
-//				int ejeX = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
-//				int ejeY = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
-				
-				
-				int tamanioAleatorio = (int)(Math.random() * (200 - 100)) + 100;					
-				botonAleatorio.setBounds(ejeX, ejeY, tamanioAleatorio, tamanioAleatorio);
-				//Me confundí con lo de las coordenadas, las capturas del trabajo están medio raras
-				String codigoHexaColor = String.format("#%02x%02x%02x", randRojo, randVerde, randAzul);
-				botonAleatorio.setText(codigoHexaColor);
-				
-				
-				botonAleatorio.addActionListener(new ActionListener() {
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						JOptionPane.showMessageDialog(panel, botonAleatorio.getText());			
-					}
-				});
-				panel.add(botonAleatorio);
 				panel.repaint();
 			}
-		});
-		
-		
+		});	
 	}
 }
