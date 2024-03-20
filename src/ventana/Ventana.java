@@ -1,6 +1,7 @@
 package ventana;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -74,10 +75,17 @@ public class Ventana extends JFrame{
 		        if (teclaPresionada == 127) {
 		            panel.removeAll();
 		            panel.repaint();
-		        }else if (teclaPresionada == 87){
+		        }else if(teclaPresionada == 87) {
+					Component[] components = panel.getComponents();
+					for (Component component : components) {
+	                       if (component instanceof JButton) {
+	                           JButton button = (JButton) component;
+	                           button.setSize(button.getWidth() + 10, button.getHeight() + 10);
+	                       }
+						}
+					}
 		        	
-		        }
-		    }
+		    	}
 		});
 		
 		
@@ -113,17 +121,23 @@ public class Ventana extends JFrame{
 						JOptionPane.showMessageDialog(panel, botonAleatorio.getText());	
 						
 						botonAleatorio.addKeyListener(new KeyAdapter() {
-						    @Override
-						    public void keyPressed(KeyEvent e) {
-						    	int teclaPresionada = e.getKeyCode();
-						    	System.out.println(teclaPresionada);
-						        if (teclaPresionada == 127) {
-						            panel.removeAll();
-						            panel.repaint();
-						        } else if(teclaPresionada == 87) {
-						        	
-						        }
-						    }
+							@Override
+							public void keyPressed(KeyEvent e) {
+								int teclaPresionada = e.getKeyCode();
+								System.out.println(teclaPresionada);
+								if (teclaPresionada == 127) {
+									panel.removeAll();
+									panel.repaint();
+								} else if(teclaPresionada == 87) {
+									Component[] components = panel.getComponents();
+									for (Component component : components) {
+				                        if (component instanceof JButton) {
+				                            JButton button = (JButton) component;
+				                            button.setSize(button.getWidth() + 10, button.getHeight() + 10);
+				                        }
+				                    }
+								}
+							}
 						});
 								
 					}
