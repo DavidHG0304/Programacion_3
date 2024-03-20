@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -46,19 +47,32 @@ public class Ventana extends JFrame{
 		boton.setBounds(100, 600, 370, 50);
 		panel.add(boton);
 		
-		boton.addActionListener(new ActionListener() {
+		panel.addMouseListener(new MouseAdapter() {
+			
+			@Override
+			public void mouseExited(MouseEvent e) {
+				int randRojo = (int) (Math.random() * 255);
+				int randVerde = (int) (Math.random() * 255);
+				int randAzul = (int) (Math.random() * 255);
+				panel.setBackground(new Color(randRojo,randVerde, randAzul));
+				
+				panel.repaint();
+			}
+		});	
+		
+		boton.addMouseListener(new MouseAdapter() {
 					
 			@Override
-			public void actionPerformed(ActionEvent e) {
+			public void mouseClicked(MouseEvent e) {
 				if(e.getSource() == boton) {
+					
 					JButton botonAleatorio = new JButton();
-						
 					int randRojo = (int) (Math.random() * 255);
 					int randVerde = (int) (Math.random() * 255);
 					int randAzul = (int) (Math.random() * 255);
-							
+					
 					botonAleatorio.setBackground(new Color(randRojo,randVerde, randAzul));
-		
+					
 					int ejeX = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
 					int ejeY = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
 					int tamanioAleatorio = (int)(Math.random() * (200 - 100)) + 100;					
@@ -69,12 +83,14 @@ public class Ventana extends JFrame{
 					botonAleatorio.addActionListener(new ActionListener() {
 						@Override
 						public void actionPerformed(ActionEvent e) {
-							if(e.getSource() == botonAleatorio) {
-								panel.remove(botonAleatorio);								
-								panel.repaint();
-							}
+							JOptionPane.showMessageDialog(panel, botonAleatorio.getText());
 						}
 					});
+					
+					
+					
+					
+					
 							
 					panel.add(botonAleatorio);
 				}
