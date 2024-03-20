@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Ventana extends JFrame{
@@ -49,13 +50,32 @@ public class Ventana extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource() == boton) {
 					JButton botonAleatorio = new JButton();
-					botonAleatorio.setBackground(new Color((int)(Math.random()* 0x1000000)));
 					
+					float randRojo = (float) Math.random();
+	                float randVerde = (float) Math.random();
+	                float randAzul = (float) Math.random();
+					
+					botonAleatorio.setBackground(new Color(randRojo,randVerde, randAzul));
+
 					int ejeX = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
 					int ejeY = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
 					int tamanioAleatorio = (int)(Math.random() * (200 - 100)) + 100;					
 					botonAleatorio.setBounds(ejeX, ejeY, tamanioAleatorio, tamanioAleatorio);
-					botonAleatorio.setText("Click Me");
+					String codigoHexaColor = String.format("%.8f, %.8f, %.8f", randRojo, randVerde, randAzul);
+					botonAleatorio.setText(codigoHexaColor);
+					
+					botonAleatorio.addActionListener(new ActionListener() {
+						
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							if(e.getSource() == botonAleatorio) {
+								JOptionPane.showMessageDialog(panel, botonAleatorio.getText());
+								
+							}
+							
+						}
+					});
+					
 //					botonAleatorio.setBounds(300, 200, 60, 50);
 					
 					panel.add(botonAleatorio);
