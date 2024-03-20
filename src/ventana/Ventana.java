@@ -4,6 +4,9 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -12,6 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class Ventana extends JFrame{
 	
@@ -46,6 +50,8 @@ public class Ventana extends JFrame{
 		boton.setFont(new Font("Arial BLack",Font.BOLD, 20));
 		boton.setBounds(100, 600, 370, 50);
 		panel.add(boton);
+		panel.setFocusable(true);
+		
 		
 		panel.addMouseListener(new MouseAdapter() {
 			
@@ -60,43 +66,79 @@ public class Ventana extends JFrame{
 			}
 		});	
 		
-		boton.addMouseListener(new MouseAdapter() {
+		panel.addKeyListener(new KeyAdapter() {
+		    @Override
+		    public void keyPressed(KeyEvent e) {
+		    	int teclaPresionada = e.getKeyCode();
+		    	System.out.println(teclaPresionada);
+		        if (teclaPresionada == 127) {
+		            panel.removeAll();
+		            panel.repaint();
+		        }else if (teclaPresionada == 87){
+		        	
+		        }
+		    }
+		});
+		
+		
+		panel.addMouseListener(new MouseAdapter() {
 					
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(e.getSource() == boton) {
+				int ejeX = e.getX();
+				int ejeY = e.getY();
+//				System.out.println(ejeX);
+//				System.out.println(ejeY);
 					
-					JButton botonAleatorio = new JButton();
-					int randRojo = (int) (Math.random() * 255);
-					int randVerde = (int) (Math.random() * 255);
-					int randAzul = (int) (Math.random() * 255);
-					
-					botonAleatorio.setBackground(new Color(randRojo,randVerde, randAzul));
-					
-					int ejeX = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
-					int ejeY = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
-					int tamanioAleatorio = (int)(Math.random() * (200 - 100)) + 100;					
-					botonAleatorio.setBounds(ejeX, ejeY, tamanioAleatorio, tamanioAleatorio);
-					String codigoHexaColor = String.format("#%02x%02x%02x", randRojo, randVerde, randAzul);
-					botonAleatorio.setText(codigoHexaColor);
-					
-					botonAleatorio.addActionListener(new ActionListener() {
-						@Override
-						public void actionPerformed(ActionEvent e) {
-							JOptionPane.showMessageDialog(panel, botonAleatorio.getText());
-						}
-					});
-					
-					
-					
-					
-					
-							
-					panel.add(botonAleatorio);
-				}
+				JButton botonAleatorio = new JButton();
+				int randRojo = (int) (Math.random() * 255);
+				int randVerde = (int) (Math.random() * 255);
+				int randAzul = (int) (Math.random() * 255);
+				botonAleatorio.setBackground(new Color(randRojo,randVerde, randAzul));
+						
+		//		int ejeX = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
+		//		int ejeY = (int)(Math.random() * (panel.getWidth()-botonAleatorio.getWidth()));
+						
+						
+				int tamanioAleatorio = (int)(Math.random() * (200 - 50)) + 10;					
+				botonAleatorio.setBounds(ejeX, ejeY, tamanioAleatorio, tamanioAleatorio);
+				//Me confundí con lo de las coordenadas, las capturas del trabajo están medio raras
+				String codigoHexaColor = String.format("#%02x%02x%02x", randRojo, randVerde, randAzul);
+				botonAleatorio.setText(codigoHexaColor);
 				
+				
+				botonAleatorio.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						JOptionPane.showMessageDialog(panel, botonAleatorio.getText());	
+						
+						botonAleatorio.addKeyListener(new KeyAdapter() {
+						    @Override
+						    public void keyPressed(KeyEvent e) {
+						    	int teclaPresionada = e.getKeyCode();
+						    	System.out.println(teclaPresionada);
+						        if (teclaPresionada == 127) {
+						            panel.removeAll();
+						            panel.repaint();
+						        } else if(teclaPresionada == 87) {
+						        	
+						        }
+						    }
+						});
+								
+					}
+				});
+				
+				
+						
+				panel.add(botonAleatorio);
 				panel.repaint();
-			}
-		});	
+				}
+		});
 	}
+	
+	
+	
+	
+	
 }
