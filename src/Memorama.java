@@ -18,7 +18,10 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 
 public class Memorama extends JFrame implements MouseListener, ActionListener{
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	public JButton botones[] = new JButton[8];
@@ -30,7 +33,10 @@ public class Memorama extends JFrame implements MouseListener, ActionListener{
     public ArrayList<Integer> numeros = new ArrayList<>();
     public int intentos = 0;
     public JLabel lblNewLabel;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	/**
 	 * Launch the application.
 	 */
@@ -94,22 +100,34 @@ public class Memorama extends JFrame implements MouseListener, ActionListener{
             botones[i] = new JButton(""+numeros.get(i));
             panel_2.add(botones[i]);
             botones[i].addActionListener(this);
+<<<<<<< HEAD
             ImageIcon icon = new ImageIcon(getClass().getResource("backside.png")); // Cambiar por la ruta de tu imagen
             botones[i].setIcon(icon);
 //    		imgNuevo.setIcon(new ImageIcon(getClass().getResource("boton-eliminar.png")));
+=======
+            ImageIcon icon = new ImageIcon(getClass().getResource("backside.png"));
+            botones[i].setIcon(icon);
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
         }
 		
 	}
 
 	public void actionPerformed(ActionEvent e) {
 	    JButton boton = (JButton) e.getSource();
+<<<<<<< HEAD
 	    int valorBoton = Integer.parseInt(boton.getText()); // Obtener el valor del botón
+=======
+	    int valorBoton = Integer.parseInt(boton.getText());
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	    
 	    
 	    if (!boton.isEnabled()) {
 	        return;
 	    }
+<<<<<<< HEAD
 	    
+=======
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	    ImageIcon imagenFrente = null;
 	    
 	    switch (valorBoton) {
@@ -129,7 +147,10 @@ public class Memorama extends JFrame implements MouseListener, ActionListener{
             break;
 	    }
 	    boton.setIcon(imagenFrente);
+<<<<<<< HEAD
 	    
+=======
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	    if (botonesSeleccionados == 0) {
 	        primerBotonPresionado = valorBoton;
 	        boton.setEnabled(false);
@@ -152,13 +173,19 @@ public class Memorama extends JFrame implements MouseListener, ActionListener{
 	            JOptionPane.showMessageDialog(null, "No es un par");
 	            resetearBotones();
 	        }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	        primerBotonPresionado = 1;
 	        segundoBotonPresionado = 1;
 	        botonesSeleccionados = 0;
 	    }
 	}
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	public boolean todosLosParesEncontrados() {
 	    for (int i = 0; i < paresEncontrados.length; i++) {
 	        for (int j = 0; j < paresEncontrados[i].length; j++) {
@@ -169,7 +196,10 @@ public class Memorama extends JFrame implements MouseListener, ActionListener{
 	    }
 	    return true;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	public void marcarParEncontrado(int valorPar) {
         for (int i = 0; i < botones.length; i++) {
             int valorBoton = Integer.parseInt(botones[i].getText());
@@ -181,11 +211,15 @@ public class Memorama extends JFrame implements MouseListener, ActionListener{
             }
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	public void reiniciar() {
 	    botonesSeleccionados = 0;
 	    primerBotonPresionado = -1;
 	    segundoBotonPresionado = -1;
+<<<<<<< HEAD
 	    contentPane.remove(botones[0].getParent()); // Remover el panel actual con los botones
 
 	    JPanel panel_2 = new JPanel(); // Crear un nuevo panel
@@ -193,12 +227,20 @@ public class Memorama extends JFrame implements MouseListener, ActionListener{
 	    panel_2.setLayout(new GridLayout(2, 4, 0, 0));
 
 	    for (int i = 0; i < 8; i++) { // Agregar nuevos botones al panel
+=======
+	    contentPane.remove(botones[0].getParent());
+	    JPanel panel_2 = new JPanel();
+	    contentPane.add(panel_2, BorderLayout.CENTER);
+	    panel_2.setLayout(new GridLayout(2, 4, 0, 0));
+	    for (int i = 0; i < 8; i++) { 
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	        botones[i] = new JButton(""+numeros.get(i));
 	        panel_2.add(botones[i]);
 	        botones[i].addActionListener(this);
 	        ImageIcon icon = new ImageIcon(getClass().getResource("backside.png"));
 	        botones[i].setIcon(icon);
 	    }
+<<<<<<< HEAD
 	    
 	    intentos = 0; // Reiniciar el contador de intentos
 	    lblNewLabel.setText("Intentos: 0"); // Reiniciar etiqueta de intentos fuera del bucle
@@ -208,6 +250,14 @@ public class Memorama extends JFrame implements MouseListener, ActionListener{
 	}
 	
 
+=======
+	    intentos = 0;
+	    lblNewLabel.setText("Intentos: 0");
+	    paresEncontrados = new boolean[2][4]; 
+	    Collections.shuffle(numeros);
+	    contentPane.revalidate(); 
+	}
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	public void resetearBotones() {
 	    for (int i = 0; i < botones.length; i++) {
 	        int fila = i / 4;
@@ -219,23 +269,33 @@ public class Memorama extends JFrame implements MouseListener, ActionListener{
 	        }
 	    }
 	}
+<<<<<<< HEAD
     
+=======
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
+<<<<<<< HEAD
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
@@ -249,4 +309,14 @@ public class Memorama extends JFrame implements MouseListener, ActionListener{
 		
 	}
 
+=======
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+	}
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+	}
+>>>>>>> 0fd8e88 (unidad 3: ejercicio 13)
 }
