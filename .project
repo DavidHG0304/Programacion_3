@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<name>Interfaz</name>
-=======
-	<name>ActionListener</name>
->>>>>>> 01e3c80 (first commit)
-=======
-	<name>ActCalculadora</name>
->>>>>>> 4be2595 (unidad 2: ejercicio 20)
-=======
-	<name>Memorama</name>
->>>>>>> db29bc1 (unidad 3: ejercicio 13)
-=======
-	<name>Examen Unidad 2</name>
->>>>>>> 298fb5c (Evaluación unidad 2)
+	<name>Teclado</name>
 	<comment></comment>
 	<projects>
 	</projects>
