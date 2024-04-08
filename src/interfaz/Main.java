@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 package interfaz;
 
 public class Main {
@@ -10,6 +11,8 @@ public class Main {
 
 }
 =======
+=======
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)
 package interfaz;
 
 public class Main {
@@ -20,4 +23,7 @@ public class Main {
 	}
 
 }
+<<<<<<< HEAD
 >>>>>>> 79792e6 (unidad 3: ejercicio 15)
+=======
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)

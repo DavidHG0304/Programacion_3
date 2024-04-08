@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 package interfaz;
 
 import java.awt.BasicStroke;
@@ -1284,6 +1285,8 @@ public class Interfaz extends JFrame{
 	
 }
 =======
+=======
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)
 package interfaz;
 
 import java.awt.BasicStroke;
@@ -2568,4 +2571,7 @@ public class Interfaz extends JFrame{
 	}
 	
 }
+<<<<<<< HEAD
 >>>>>>> 79792e6 (unidad 3: ejercicio 15)
+=======
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)

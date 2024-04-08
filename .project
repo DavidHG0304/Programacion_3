@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>Teclado</name>
@@ -17,6 +18,8 @@
 	</natures>
 </projectDescription>
 =======
+=======
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>Teclado</name>
@@ -34,4 +37,7 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>
+<<<<<<< HEAD
 >>>>>>> 79792e6 (unidad 3: ejercicio 15)
+=======
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 package ventana;
 
 import java.awt.BorderLayout;
@@ -583,6 +584,8 @@ public class Login extends JFrame{
 }
 	
 =======
+=======
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)
 package ventana;
 
 import java.awt.BorderLayout;
@@ -1166,4 +1169,7 @@ public class Login extends JFrame{
 	*/
 }
 	
+<<<<<<< HEAD
 >>>>>>> 79792e6 (unidad 3: ejercicio 15)
+=======
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)

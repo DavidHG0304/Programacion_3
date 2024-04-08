@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -167,6 +168,8 @@ public class Palabras extends JFrame implements KeyListener{
 	}
 }
 =======
+=======
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -217,9 +220,20 @@ public class Palabras extends JFrame implements KeyListener{
 	public boolean verificarPalabra;
 	
 	public javax.swing.Timer timer;
+<<<<<<< HEAD
 	public int segundosContador;
 	public String teclaPresionada;
 	
+=======
+//	public int segundosContador;
+	public String teclaPresionada;
+	// Las variable tipo long en este caso almacena el tiempo actual en milisegundos al iniciar el temporizador
+	// System.currentTimeMillis() devuelve el tiempo en milisegundos y un long puede contener valores grandes, por eso es utilizado en este caso
+	// https://stackoverflow.com/questions/5857812/long-vs-integer-long-vs-int-what-to-use-and-when
+	public long tiempoInicio = System.currentTimeMillis();
+	public long tiempoTranscurrido = System.currentTimeMillis() - tiempoInicio;
+    public float segundos = tiempoTranscurrido / 1000f;
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)
 	
 	
 	/**
@@ -355,6 +369,7 @@ public class Palabras extends JFrame implements KeyListener{
 			}
 		}
 		
+<<<<<<< HEAD
 		
 		// Contador
 		// https://stackoverflow.com/questions/1006611/java-swing-timer
@@ -366,6 +381,20 @@ public class Palabras extends JFrame implements KeyListener{
 		        tiempo.setText(Integer.toString(segundosContador));
 				
 			}
+=======
+		// Contador
+		// https://stackoverflow.com/questions/1006611/java-swing-timer
+		timer = new javax.swing.Timer(1, new ActionListener() {
+		   
+
+		    @Override
+		    public void actionPerformed(ActionEvent e) {
+		    	// Calcula la diferencia entre el tiempo actual y el momento en que se inició el temporizador
+		        tiempoTranscurrido = System.currentTimeMillis() - tiempoInicio;
+		        segundos = tiempoTranscurrido / 1000f;
+		        tiempo.setText(String.format("%.3f", segundos));
+		    }
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)
 		});
 		timer.start();
 	}
@@ -423,6 +452,7 @@ public class Palabras extends JFrame implements KeyListener{
 		}
 		
 		// Cambiar palabra al presionar enter y mandar lo que estabas escribiendo para escribir
+<<<<<<< HEAD
 		if(e.getKeyCode() == KeyEvent.VK_ENTER) {
 			// Condición para verificar que la palabra ingresada es la misma que la que se tiene que ingresar
 			if(lblPalabra.getText().trim().equals(auxPalabraEscrita.trim())) {
@@ -443,6 +473,28 @@ public class Palabras extends JFrame implements KeyListener{
 			//	System.out.println(auxPalabraEscrita);
 			
 		}
+=======
+//		if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+//			// Condición para verificar que la palabra ingresada es la misma que la que se tiene que ingresar
+//			if(lblPalabra.getText().trim().equals(auxPalabraEscrita.trim())) {
+//				timer.stop();
+//				JOptionPane.showMessageDialog(null, "Ha escrito la palabra en "+segundosContador+" segundos", "Bien!",JOptionPane.INFORMATION_MESSAGE);
+//				lblEscrito.setText("");
+//				auxPalabraEscrita = ""; 
+//				tiempo.setText("0");
+//				segundosContador = 0;
+//				timer.restart();
+//				lblPalabra.setText("   "+palabras[(int) (Math.random()*100)]);
+//			}else {
+//				JOptionPane.showMessageDialog(null, "La palabra ingresada no esta bien escrita", "Mal!",JOptionPane.INFORMATION_MESSAGE);
+//				lblEscrito.setText("");
+//				auxPalabraEscrita = ""; 
+//			}
+//			teclaEnter.setBackground(randomColor);
+//			//	System.out.println(auxPalabraEscrita);
+//			
+//		}
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)
 		
 		//Timer para cambiar los colores de los labels al que tenían por defecto después de un 0.1 segundos
 		//https://stackoverflow.com/questions/2258066/run-a-java-function-after-a-specific-number-of-seconds
@@ -473,14 +525,35 @@ public class Palabras extends JFrame implements KeyListener{
 				},
 				100
 		);
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 		
 	}
 	
 }
 >>>>>>> 79792e6 (unidad 3: ejercicio 15)
+=======
+		if (auxPalabraEscrita.equals(lblPalabra.getText().trim())) {
+	        timer.stop();
+//	        JOptionPane.showMessageDialog(null, "Ha escrito la palabra en " + segundosContador + " segundos", "Bien!", JOptionPane.INFORMATION_MESSAGE);
+	        JOptionPane.showMessageDialog(null, "Ha escrito la palabra en " + segundos + " segundos", "Bien!", JOptionPane.INFORMATION_MESSAGE);
+	        lblEscrito.setText("");
+	        auxPalabraEscrita = "";
+	        tiempo.setText("0");
+//	        segundosContador = 0;
+	        timer.restart();
+	     // Reinicia el contador a 0 al completar una palabra
+	    	tiempoInicio = System.currentTimeMillis();
+	        lblPalabra.setText("   " + palabras[(int) (Math.random() * 100)]);
+	    }
+	}
+}
+>>>>>>> 7b4e555 (unidad 3: ejercicio 16)
