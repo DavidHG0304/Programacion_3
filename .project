@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>Teclado</name>
@@ -23,6 +24,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>Teclado</name>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>PanelesLoginRegistro</name>
+>>>>>>> 604ca8b (unidad 3: ejercicio 17)
 	<comment></comment>
 	<projects>
 	</projects>
@@ -38,6 +44,9 @@
 	</natures>
 </projectDescription>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 79792e6 (unidad 3: ejercicio 15)
 =======
 >>>>>>> 7b4e555 (unidad 3: ejercicio 16)
+=======
+>>>>>>> 604ca8b (unidad 3: ejercicio 17)
