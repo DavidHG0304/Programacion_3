@@ -56,7 +56,86 @@ public class Paneles extends JFrame {
 	 */
 	public Paneles() {
 		this.login(frame);
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
 		
+		JMenu mnNewMenu = new JMenu("Cuenta");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmNewMenuItem = new JMenuItem("Login");
+		mnNewMenu.add(mntmNewMenuItem);
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				contentPane.removeAll();
+				contentPane.repaint();
+				contentPane.revalidate();
+				login(frame);
+				
+			}
+		});
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Registro");
+		mnNewMenu.add(mntmNewMenuItem_1);
+		mntmNewMenuItem_1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				contentPane.removeAll();
+				contentPane.repaint();
+				contentPane.revalidate();
+				registro(frame);
+				
+			}
+		});
+		
+		JMenuItem itemRecuperacion = new JMenuItem("Recuperacion de cuenta");
+		mnNewMenu.add(itemRecuperacion);
+		itemRecuperacion.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				contentPane.removeAll();
+				contentPane.repaint();
+				contentPane.revalidate();
+				recuperacionCuenta(frame);
+			}
+		});
+		
+		JMenu menuUsuarios = new JMenu("Usuarios");
+		menuBar.add(menuUsuarios);
+		
+		JMenuItem menuAlta = new JMenuItem("Alta");
+		menuUsuarios.add(menuAlta);
+		menuAlta.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				contentPane.removeAll();
+				contentPane.repaint();
+				contentPane.revalidate();
+				altaCuenta(frame);
+			}
+		});
+		
+		
+		JMenuItem menuBaja = new JMenuItem("Baja");
+		menuUsuarios.add(menuBaja);
+
+		JMenuItem menuConsultar = new JMenuItem("Consultar");
+		menuUsuarios.add(menuConsultar);
+		
+		
+		JMenu menuAyuda = new JMenu("Ayuda");
+		menuBar.add(menuAyuda);
+		
+		JMenuItem menuPregunta1 = new JMenuItem("¿Cómo crear un usuario?");
+		menuAyuda.add(menuPregunta1);
+		
+		JMenuItem menuPregunta2 = new JMenuItem("¿Cómo acceder al sistema?");
+		menuAyuda.add(menuPregunta2);
+		
+		JMenuItem menuPregunta3 = new JMenuItem("¿Qué pasa si olvidé mi contraseña?");
+		menuAyuda.add(menuPregunta3);
 		
 	}
 	
@@ -64,23 +143,8 @@ public class Paneles extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 507, 613);
 		
-		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("Inicio");
-		menuBar.add(mnNewMenu);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Login");
-		mnNewMenu.add(mntmNewMenuItem);
-		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Registro");
-		mnNewMenu.add(mntmNewMenuItem_1);
-		
-		JMenu mnNewMenu_1 = new JMenu("Ayuda");
-		menuBar.add(mnNewMenu_1);
-		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Recover");
-		mnNewMenu_1.add(mntmNewMenuItem_2);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(0, 0, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -167,17 +231,9 @@ public class Paneles extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 507, 613);
 		
-		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
+	
 		
-		JMenu mnNewMenu = new JMenu("Usuarios");
-		menuBar.add(mnNewMenu);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Login");
-		mnNewMenu.add(mntmNewMenuItem);
-		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Register");
-		mnNewMenu.add(mntmNewMenuItem_1);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(0, 0, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -298,5 +354,63 @@ public class Paneles extends JFrame {
 		});
 		
 	}
+	
+	public void recuperacionCuenta(JFrame frame) {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 507, 613);
+		
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 0, 0));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
+		
+		JPanel panelEnPanalla = new JPanel();
+		panelEnPanalla.setBackground(new Color(108, 20, 72));
+		contentPane.add(panelEnPanalla, BorderLayout.CENTER);
+		panelEnPanalla.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Recuperación");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setForeground(Color.WHITE);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 39));
+		lblNewLabel.setBounds(82, 23, 315, 116);
+		panelEnPanalla.add(lblNewLabel);
+	}
+	
+	public void altaCuenta(JFrame frame) {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 507, 613);
+		
+		
+		
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 0, 0));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
+		
+		JPanel panelEnPanalla = new JPanel();
+		panelEnPanalla.setBackground(new Color(72, 20, 108));
+		contentPane.add(panelEnPanalla, BorderLayout.CENTER);
+		panelEnPanalla.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Alta");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setForeground(Color.WHITE);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 39));
+		lblNewLabel.setBounds(82, 23, 315, 116);
+		panelEnPanalla.add(lblNewLabel);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 }
