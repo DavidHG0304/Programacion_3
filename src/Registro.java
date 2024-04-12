@@ -164,6 +164,9 @@ public class Registro extends JFrame {
 				}
 			}
 		});
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 10eb18a (unidad 3: ejercicicio 19)
 	}
 }
