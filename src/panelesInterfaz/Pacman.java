@@ -19,9 +19,12 @@ public class Pacman extends JFrame implements KeyListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel panelPrincipal;
+	private JPanel panel = new JPanel();
 
 	public int y = 220;
 	public int x = 317;
+	public JugadoresElementos jugador = new JugadoresElementos(317, 220, 50, 50);
+	public JugadoresElementos rectangulo = new JugadoresElementos(295, 100, 20, 300);
 	
 	/**
 	 * Launch the application.
@@ -54,16 +57,26 @@ public class Pacman extends JFrame implements KeyListener {
 		panelPrincipal.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(panelPrincipal);
 		panelPrincipal.setLayout(new BorderLayout(0, 10));
-		JPanel panel = new JPanel() {
+		
+		//Inicializar jugador (Circulo amarillo
+		
+		
+		
+		panel = new JPanel() {
 			
 			public void paint (Graphics g) {
 				super.paint(g);
 				
 				Graphics2D g2d = (Graphics2D) g;
 				g2d.setColor(Color.yellow);
-				g2d.fillOval(x, y, 50, 50);
+//				g2d.fillOval(x, y, 50, 50);
+				g2d.fillOval(jugador.getX(), jugador.getY(), jugador.getW(), jugador.getH());
 				g2d.setColor(Color.BLACK);
-				g2d.drawOval(x, y, 50, 50);				
+				g2d.drawOval(jugador.getX(), jugador.getY(), jugador.getW(), jugador.getH());				
+				//Objeto 
+				g2d.setColor(Color.WHITE);
+				g2d.fillRect(rectangulo.getX(), rectangulo.getY(), rectangulo.getW(), rectangulo.getH());
+				
 				repaint();
 				
 			}	
@@ -73,23 +86,6 @@ public class Pacman extends JFrame implements KeyListener {
 		panel.setLayout(null);
 		JPanel panel_1 = new JPanel();
 		panelPrincipal.add(panel_1, BorderLayout.SOUTH);
-		
-		
-//		setContentPane ( new JPanel () {
-//			public void paint (Graphics g) {
-//				super.paint(g);
-//				
-//				Graphics2D g2d = (Graphics2D) g;
-//				g2d.setColor(Color.yellow);
-//				g2d.fillOval(320, 220, 50, 50);
-//				g2d.setColor(Color.BLACK);
-//				g2d.drawOval(320, 220, 50, 50);				
-//				repaint();
-//				
-//			}	
-//		});
-
-	
 		
 		
 		
@@ -111,21 +107,41 @@ public class Pacman extends JFrame implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode() == KeyEvent.VK_W ) {
-			y-=10;
+		if((e.getKeyCode() == KeyEvent.VK_W) || (e.getKeyCode() == KeyEvent.VK_UP) ) {
+			jugador.setY(jugador.getY()-1);;
+//			y-=10;
 		}
-		if(e.getKeyCode() == KeyEvent.VK_A ) {
-			x-=10;
+		if((e.getKeyCode() == KeyEvent.VK_A)||(e.getKeyCode() == KeyEvent.VK_LEFT) ) {
+			jugador.setX(jugador.getX()-1);
 		}
-		if(e.getKeyCode() == KeyEvent.VK_S ) {
-			y+=10;
+		if((e.getKeyCode() == KeyEvent.VK_S)||(e.getKeyCode() == KeyEvent.VK_DOWN)) {
+			jugador.setY(jugador.getY()+1);
 		}
-		if(e.getKeyCode() == KeyEvent.VK_D ) {
-			x+=10;
+		if((e.getKeyCode() == KeyEvent.VK_D)||(e.getKeyCode() == KeyEvent.VK_RIGHT) ) {
+			jugador.setX(jugador.getX()+1);
 		}
 		
+		panel.update(panel.getGraphics());
+		
+		
+		
+		if((jugador.colisionaron(jugador, rectangulo))) {
+			System.out.println("ha colisionado");
+			
+			jugador.setX(jugador.getX()-1);;
+		}
+		if((jugador.colisionaron(jugador, rectangulo))) {
+			System.out.println("ha colisionado");
+			
+			jugador.setX(jugador.getX()-1);;
+		}
+		
+		
+		System.out.println(jugador.getX());
 		
 	}
+	
+		
 
 	@Override
 	public void keyReleased(KeyEvent e) {
