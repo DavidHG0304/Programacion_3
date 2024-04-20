@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
@@ -19,6 +20,8 @@
 >>>>>>> 604ca8b (unidad 3: ejercicio 17)
 =======
 >>>>>>> 10eb18a (unidad 3: ejercicicio 19)
+=======
+>>>>>>> e4b50c5 (unidad 21: ejercicio 7)
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
@@ -29,6 +32,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,3 +43,5 @@
 >>>>>>> 604ca8b (unidad 3: ejercicio 17)
 =======
 >>>>>>> 10eb18a (unidad 3: ejercicicio 19)
+=======
+>>>>>>> e4b50c5 (unidad 21: ejercicio 7)

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>Teclado</name>
@@ -35,6 +36,11 @@
 <projectDescription>
 	<name>PanelesLoginRegistro</name>
 >>>>>>> 10eb18a (unidad 3: ejercicicio 19)
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Pacman</name>
+>>>>>>> e4b50c5 (unidad 21: ejercicio 7)
 	<comment></comment>
 	<projects>
 	</projects>
@@ -49,6 +55,7 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,3 +66,5 @@
 >>>>>>> 604ca8b (unidad 3: ejercicio 17)
 =======
 >>>>>>> 10eb18a (unidad 3: ejercicicio 19)
+=======
+>>>>>>> e4b50c5 (unidad 21: ejercicio 7)
