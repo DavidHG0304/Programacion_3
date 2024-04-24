@@ -1,6 +1,10 @@
 package pacman;
 
 import java.awt.Graphics;
+<<<<<<< HEAD
+=======
+import java.util.Iterator;
+>>>>>>> 2a0d70f (unidad 3: ejercicio 22)
 
 public class JugadoresElementos {
 	
@@ -9,6 +13,12 @@ public class JugadoresElementos {
 	private int w;
 	private int h;
 	
+<<<<<<< HEAD
+=======
+	public JugadoresElementos() {
+	}
+	
+>>>>>>> 2a0d70f (unidad 3: ejercicio 22)
 	public JugadoresElementos(int x, int y, int w, int h) {
 		this.x = x;
 		this.y = y;
@@ -47,6 +57,7 @@ public class JugadoresElementos {
 	public void setH(int h) {
 		this.h = h;
 	}
+<<<<<<< HEAD
 
 	public boolean colisionaron(JugadoresElementos player, JugadoresElementos rectangulo, int velocidad) {
 
@@ -61,4 +72,17 @@ public class JugadoresElementos {
 		return false;
 	}	
 
+=======
+	
+	public boolean verificarColisiones(JugadoresElementos elementos[], JugadoresElementos jugador, int newX, int newY) {
+		for (JugadoresElementos elemento : elementos) {
+			if (newX < elemento.getX() + elemento.getW() && newX + jugador.getW() > elemento.getX()
+					&& newY < elemento.getY() + elemento.getH() && newY + jugador.getH() > elemento.getY()) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+>>>>>>> 2a0d70f (unidad 3: ejercicio 22)
 }
