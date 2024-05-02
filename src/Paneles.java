@@ -15,11 +15,8 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
-<<<<<<< HEAD
-=======
 import javax.swing.JCheckBox;
 
->>>>>>> 10eb18a (unidad 3: ejercicicio 19)
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.BorderLayout;
@@ -30,13 +27,10 @@ public class Paneles extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JPasswordField passwordField;
-<<<<<<< HEAD
-=======
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JPasswordField passwordField_1;
 	static Paneles frame = new Paneles();
->>>>>>> 10eb18a (unidad 3: ejercicicio 19)
 
 	/**
 	 * Launch the application.
@@ -45,14 +39,9 @@ public class Paneles extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-<<<<<<< HEAD
-					Paneles frame = new Paneles();
-					frame.setVisible(true);
-=======
 
 					frame.setVisible(true);
 
->>>>>>> 10eb18a (unidad 3: ejercicicio 19)
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -64,35 +53,6 @@ public class Paneles extends JFrame {
 	 * Create the frame.
 	 */
 	public Paneles() {
-<<<<<<< HEAD
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 507, 613);
-		
-		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
-		
-		JMenu mnNewMenu = new JMenu("Inicio");
-		menuBar.add(mnNewMenu);
-		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Login");
-		mnNewMenu.add(mntmNewMenuItem);
-		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Registro");
-		mnNewMenu.add(mntmNewMenuItem_1);
-		
-		JMenu mnNewMenu_1 = new JMenu("Ayuda");
-		menuBar.add(mnNewMenu_1);
-		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Acerca de");
-		mnNewMenu_1.add(mntmNewMenuItem_2);
-		contentPane = new JPanel();
-		contentPane.setBackground(new Color(0, 0, 0));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		
-		setContentPane(contentPane);
-		contentPane.setLayout(new BorderLayout(0, 0));
-		
-=======
 		this.login(frame);
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -238,42 +198,22 @@ public class Paneles extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 
->>>>>>> 10eb18a (unidad 3: ejercicicio 19)
 		JPanel panelLogin = new JPanel();
 		panelLogin.setBackground(new Color(111, 111, 111));
 		contentPane.add(panelLogin, BorderLayout.CENTER);
 		panelLogin.setLayout(null);
-<<<<<<< HEAD
-		
-=======
 
->>>>>>> 10eb18a (unidad 3: ejercicicio 19)
 		JLabel lblNewLabel = new JLabel("Iniciar Sesion");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 39));
 		lblNewLabel.setBounds(82, 23, 315, 116);
 		panelLogin.add(lblNewLabel);
-<<<<<<< HEAD
-		
-=======
 
->>>>>>> 10eb18a (unidad 3: ejercicicio 19)
 		textField = new JTextField();
 		textField.setColumns(10);
 		textField.setBounds(82, 181, 315, 45);
 		panelLogin.add(textField);
-<<<<<<< HEAD
-		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(82, 280, 315, 45);
-		panelLogin.add(passwordField);
-		
-		JLabel label = new JLabel("New label");
-		label.setBounds(82, 184, 315, -33);
-		panelLogin.add(label);
-		
-=======
 
 		passwordField = new JPasswordField();
 		passwordField.setBounds(82, 280, 315, 45);
@@ -283,7 +223,6 @@ public class Paneles extends JFrame {
 		label.setBounds(82, 184, 315, -33);
 		panelLogin.add(label);
 
->>>>>>> 10eb18a (unidad 3: ejercicicio 19)
 		JLabel lblNewLabel_1 = new JLabel("Ingrese el nombre de usuario");
 		lblNewLabel_1.setOpaque(true);
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -292,11 +231,6 @@ public class Paneles extends JFrame {
 		lblNewLabel_1.setBackground(Color.BLACK);
 		lblNewLabel_1.setBounds(82, 162, 315, 20);
 		panelLogin.add(lblNewLabel_1);
-<<<<<<< HEAD
-		
-=======
-
->>>>>>> 10eb18a (unidad 3: ejercicicio 19)
 		JLabel lblNewLabel_1_1 = new JLabel("Ingrese su contraseña");
 		lblNewLabel_1_1.setOpaque(true);
 		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -305,28 +239,6 @@ public class Paneles extends JFrame {
 		lblNewLabel_1_1.setBackground(Color.BLACK);
 		lblNewLabel_1_1.setBounds(82, 261, 315, 20);
 		panelLogin.add(lblNewLabel_1_1);
-<<<<<<< HEAD
-		
-		JButton btnNewButton = new JButton("Login");
-		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		btnNewButton.setBounds(137, 417, 193, 68);
-		panelLogin.add(btnNewButton);
-		
-		btnNewButton.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				//System.out.println("hola");
-				JOptionPane.showMessageDialog(null, "Error al ingresar las credenciales", "Alerta", JOptionPane.WARNING_MESSAGE);
-			}
-		});
-		
-		
-		
-		
-		
-	}
-=======
 
 		JButton botonCambiar = new JButton("Crear Cuenta");
 		botonCambiar.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -633,5 +545,4 @@ public class Paneles extends JFrame {
 		panelEnPanalla.add(lblNewLabel);
 	}
 
->>>>>>> 10eb18a (unidad 3: ejercicicio 19)
 }
