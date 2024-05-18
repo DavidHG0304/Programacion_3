@@ -7,5 +7,7 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/JTattoo-1.6.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/mysql-connector-j-8.4.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
