@@ -1,16 +1,18 @@
 package vista;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.font.TextAttribute;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import componentesPersonalizados.RoundJTextField;
-import componentesPersonalizados.RoundedBorder;
-import componentesPersonalizados.PaintRombos;
-import componentesPersonalizados.RoundJPasswordField;
+
+import vista.recursos.componentesPersonalizados.*;
 
 public class Vista {
 	private JFrame frame;
@@ -49,6 +51,7 @@ public class Vista {
 		panelIzquierda.setBackground(Color.WHITE);
 		panelIzquierda.setLayout(null);
 		panelPrincipal.add(panelIzquierda);
+	
 		
 		// PanelDerecha
 		@SuppressWarnings("serial")
@@ -87,6 +90,25 @@ public class Vista {
 		panelDerecha.setLayout(null);
 		panelPrincipal.add(panelDerecha);
 		
+//		JLabel papu = new JLabel();
+//		try
+//		{
+//			URL url = new URL("https://firebasestorage.googleapis.com/v0/b/fotinhoscarros.appspot.com/o/blazer.png?alt=media&token=fc5e32b0-24d5-4f48-ba06-18397780a543");
+//			BufferedImage image = ImageIO.read(url);
+//			image = ImageIO.read(url);
+//			papu = new JLabel(new ImageIcon(image));
+//			papu.setBounds(-110, 100, 750, 450);
+//			panelDerecha.add(papu);
+//			
+//		}catch(
+//				IOException e2)
+//		{
+//			e2.printStackTrace();
+//			ImageIcon I22 = new ImageIcon();
+//			papu.setIcon(I22);
+//		}
+		
+		
 		// Label bienvenida
 		JLabel lblBienvenida = new JLabel("¡Bienvenido!");
 		lblBienvenida.setForeground(Color.WHITE);
@@ -101,7 +123,6 @@ public class Vista {
 		boton.setBounds(100, 490, 250, 40);
 		boton.setFocusPainted(false);
 		boton.setBackground(new Color(0,122,247));
-		
 		boton.setBorderPainted(false);
 		boton.setContentAreaFilled(false);
 		boton.setFocusPainted(false);
@@ -128,14 +149,14 @@ public class Vista {
 		txtCorreo.setForeground(new Color(0,0,0,90));
 		txtCorreo.setBounds(80, 250, 300, 35);
 		txtCorreo.setBackground(new Color(240,240,240));
-		((RoundJTextField) txtCorreo).setPrefixIcon(new ImageIcon(getClass().getResource("/imagenes/mail.png")));
+		((RoundJTextField) txtCorreo).setPrefixIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/mail.png")));
 		panelIzquierda.add(txtCorreo);
 		
 		passCheckBox.setText("CheckBox1");
 		passCheckBox.setLocation(340, 355);
 		passCheckBox.setSize(24, 24);
 		passCheckBox.setOpaque(false);
-		passCheckBox.setIcon(new ImageIcon(getClass().getResource("/imagenes/eye-closed.png")));
+		passCheckBox.setIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/eye-closed.png")));
 		panelIzquierda.add(passCheckBox);
 		
 		txtContrasenia.setText("Contraseña");
@@ -144,11 +165,11 @@ public class Vista {
 		txtContrasenia.setFont(new Font("Inter", Font.PLAIN, 12));
 		txtContrasenia.setBounds(80, 350, 300, 35);
 		txtContrasenia.setBackground(new Color(240,240,240));
-		((RoundJPasswordField) txtContrasenia).setPrefixIcon(new ImageIcon(getClass().getResource("/imagenes/pass.png")));
+		((RoundJPasswordField) txtContrasenia).setPrefixIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/pass.png")));
 		panelIzquierda.add(txtContrasenia);
 		
 		try {
-			iconoLogo = new ImageIcon(getClass().getResource("/imagenes/logo.png"));
+			iconoLogo = new ImageIcon(getClass().getResource("/recursos/imagenes/logo.png"));
 			JLabel imagenLogo = new JLabel(iconoLogo);
 			imagenLogo.setBounds(-20, -30, 144, 142);
 			panelIzquierda.add(imagenLogo);
@@ -192,6 +213,7 @@ public class Vista {
 	// Metodo que asigna los action listeners a los botones que se utilizarán en los paneles
 	public void asignarActListner(ActionListener listener) {
 		boton.addActionListener(listener);
+		botonRegistrar.addActionListener(listener);
 	}
 	
 	public void asignarActListnerCheckBox(ActionListener listener) {

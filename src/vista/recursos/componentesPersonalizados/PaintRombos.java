@@ -1,4 +1,4 @@
-package componentesPersonalizados;
+package vista.recursos.componentesPersonalizados;
 
 import java.awt.Color;
 import java.awt.Graphics;

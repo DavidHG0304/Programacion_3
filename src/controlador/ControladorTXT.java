@@ -63,7 +63,7 @@ public class ControladorTXT implements ActionListener, FocusListener, MouseListe
 	    	nuevaVista.getTxtContrasenia().setEchoChar((char)0);
 	    	nuevaVista.getTxtContrasenia().setForeground(new Color(0,0,0,90));
 	    }
-	    nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/imagenes/eye-closed.png")));
+//	    nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/imagenes/eye-closed.png")));
 	}
 	
 	// Metodos ActionListener
@@ -99,7 +99,7 @@ public class ControladorTXT implements ActionListener, FocusListener, MouseListe
 			nuevaVista.getBoton().setForeground(Color.WHITE);
 		}
 		if(e.getSource().equals(nuevaVista.getBotonRegistrar())){
-			nuevaVista.getBotonRegistrar().setForeground(new Color(0,0,0,95));
+			nuevaVista.getBotonRegistrar().setForeground(new Color(0,0,0,64));
 		}
 	}
 	
@@ -107,7 +107,7 @@ public class ControladorTXT implements ActionListener, FocusListener, MouseListe
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getSource().equals(nuevaVista.getBoton())) {
-			nuevaVista.getBoton().setForeground(Color.WHITE);
+			nuevaVista.getBoton().setForeground(Color.LIGHT_GRAY);
 		}
 		if(e.getSource().equals(nuevaVista.getBotonRegistrar())){
 			nuevaVista.getBotonRegistrar().setForeground(new Color(0,0,0,64));
@@ -122,7 +122,7 @@ public class ControladorTXT implements ActionListener, FocusListener, MouseListe
 			nuevaVista.getBoton().setForeground(Color.LIGHT_GRAY);
 		}
 		if(e.getSource().equals(nuevaVista.getBotonRegistrar())){
-			nuevaVista.getBotonRegistrar().setForeground(new Color(0,0,0,90));
+			nuevaVista.getBotonRegistrar().setForeground(new Color(0,0,0,95));
 		}
 	}
 	

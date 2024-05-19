@@ -8,5 +8,6 @@ public class Main {
 		// TODO Auto-generated method stub
 		Controlador controlador = new Controlador();
 		controlador.login();
+//		controlador.panelPrincipal();
 	}
 }
