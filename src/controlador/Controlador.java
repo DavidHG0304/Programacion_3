@@ -56,7 +56,7 @@ public class Controlador implements ActionListener{
 	
 	// Metodo validacion Login
 	public void accionLogin() {
-		if(metodos.loginValidado(new String (nuevaVista.getTxtContrasenia().getPassword()), nuevaVista.getTxtCorreo(),  nuevaVista.getTxtContrasenia())) {
+		if(metodos.loginValidado(new String (nuevaVista.getTxtContrasenia().getPassword()), nuevaVista.getTxtCorreo(), nuevaVista.getTxtContrasenia())) {
 			sesionIniciada = nuevoModelo.accionLogin(nuevaVista.getTxtCorreo().getText(),new String (nuevaVista.getTxtContrasenia().getPassword()));
 		}
 		metodos.loginNoValido(nuevaVista.getTxtCorreo(), nuevaVista.getTxtContrasenia());
@@ -64,7 +64,10 @@ public class Controlador implements ActionListener{
 	
 	// Metodo validacion Registro
 	public void accionRegistro() {
-		usuarioRegistrado = nuevoModelo.accionRegistro(new String(vistaRegistro.getTxtContrasenia().getPassword()), new String(vistaRegistro.getConfirmarContrasenia().getPassword()),  vistaRegistro.getNombre(), vistaRegistro.getApellidos(), vistaRegistro.getTxtCorreo(), vistaRegistro.getTxtContrasenia(), vistaRegistro.getConfirmarContrasenia());
+		if(metodos.registroValido(new String(vistaRegistro.getTxtContrasenia().getPassword()), new String(vistaRegistro.getConfirmarContrasenia().getPassword()),  vistaRegistro.getNombre(), vistaRegistro.getApellidos(), vistaRegistro.getTxtCorreo(), vistaRegistro.getTxtContrasenia(), vistaRegistro.getConfirmarContrasenia())){
+			usuarioRegistrado = nuevoModelo.accionRegistro(vistaRegistro.getNombre().getText(), vistaRegistro.getApellidos().getText(), vistaRegistro.getTxtCorreo().getText(), new String(vistaRegistro.getTxtContrasenia().getPassword()), new String(vistaRegistro.getConfirmarContrasenia().getPassword()));
+		}
+//		metodos.registroNoValido(vistaRegistro.getNombre(), vistaRegistro.getApellidos(), vistaRegistro.getTxtCorreo(), vistaRegistro.getTxtContrasenia(), vistaRegistro.getConfirmarContrasenia());
 	}
 
 	@Override
