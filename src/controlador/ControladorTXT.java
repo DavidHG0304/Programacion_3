@@ -40,7 +40,7 @@ public class ControladorTXT implements ActionListener, FocusListener, MouseListe
 			nuevaVista.getPassCheckBox().setSelected(false);
 			nuevaVista.getTxtContrasenia().setEchoChar('*');
 			String password = String.valueOf(nuevaVista.getTxtContrasenia().getPassword());
-			nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/imagenes/eye-closed.png")));
+			nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye-closed.png")));
 
 			if (password.toLowerCase().equals("contraseña")) {
 				nuevaVista.getTxtContrasenia().setText("");
@@ -77,10 +77,10 @@ public class ControladorTXT implements ActionListener, FocusListener, MouseListe
 			if (!password.equals("Contraseña")) {
 				if (nuevaVista.getPassCheckBox().isSelected()) {
 					nuevaVista.getTxtContrasenia().setEchoChar((char) 0);
-					nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/imagenes/eye.png")));
+					nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye.png")));
 				} else {
 					nuevaVista.getTxtContrasenia().setEchoChar('*');
-					nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/imagenes/eye-closed.png")));
+					nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye-closed.png")));
 				}
 			}
 		}

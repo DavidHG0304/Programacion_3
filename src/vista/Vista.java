@@ -1,13 +1,9 @@
 package vista;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.font.TextAttribute;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -149,14 +145,14 @@ public class Vista {
 		txtCorreo.setForeground(new Color(0,0,0,90));
 		txtCorreo.setBounds(80, 250, 300, 35);
 		txtCorreo.setBackground(new Color(240,240,240));
-		((RoundJTextField) txtCorreo).setPrefixIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/mail.png")));
+		((RoundJTextField) txtCorreo).setPrefixIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/mail.png")));
 		panelIzquierda.add(txtCorreo);
 		
 		passCheckBox.setText("CheckBox1");
 		passCheckBox.setLocation(340, 355);
 		passCheckBox.setSize(24, 24);
 		passCheckBox.setOpaque(false);
-		passCheckBox.setIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/eye-closed.png")));
+		passCheckBox.setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye-closed.png")));
 		panelIzquierda.add(passCheckBox);
 		
 		txtContrasenia.setText("Contraseña");
@@ -165,11 +161,11 @@ public class Vista {
 		txtContrasenia.setFont(new Font("Inter", Font.PLAIN, 12));
 		txtContrasenia.setBounds(80, 350, 300, 35);
 		txtContrasenia.setBackground(new Color(240,240,240));
-		((RoundJPasswordField) txtContrasenia).setPrefixIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/pass.png")));
+		((RoundJPasswordField) txtContrasenia).setPrefixIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/pass.png")));
 		panelIzquierda.add(txtContrasenia);
 		
 		try {
-			iconoLogo = new ImageIcon(getClass().getResource("/recursos/imagenes/logo.png"));
+			iconoLogo = new ImageIcon(getClass().getResource("/vista/recursos/imagenes/logo.png"));
 			JLabel imagenLogo = new JLabel(iconoLogo);
 			imagenLogo.setBounds(-20, -30, 144, 142);
 			panelIzquierda.add(imagenLogo);

@@ -43,7 +43,7 @@ public class VistaPanelInicio {
 		panelCentral.setLayout(null);
 		
 		// Imagen Blazer
-		ImageIcon blazerImg = new ImageIcon(getClass().getResource("/recursos/imagenes/blazerG.png"));
+		ImageIcon blazerImg = new ImageIcon(getClass().getResource("/vista/recursos/imagenes/blazerG.png"));
 		JLabel lblBlazer = new JLabel(blazerImg);
 		lblBlazer.setBounds(270, 140, 655, 317);
 		panelCentral.add(lblBlazer);
@@ -55,7 +55,7 @@ public class VistaPanelInicio {
 		elementosParteSuperior.setLayout(null);
 		
 		// Imagen logo pagina
-		ImageIcon iconoLogo = new ImageIcon(getClass().getResource("/recursos/imagenes/logo.png"));
+		ImageIcon iconoLogo = new ImageIcon(getClass().getResource("/vista/recursos/imagenes/logo.png"));
 		JLabel imagenLogo = new JLabel(iconoLogo);
 		imagenLogo.setBounds(0, 0, 89, 80);
 		elementosParteSuperior.add(imagenLogo);

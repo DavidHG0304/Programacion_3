@@ -85,7 +85,7 @@ public class VistaRegistro {
 		panelPrincipal.add(panelIzquierda);
 		
 		// Añadir logo al panel
-		ImageIcon iconoLogo = new ImageIcon(getClass().getResource("/recursos/imagenes/logo.png"));
+		ImageIcon iconoLogo = new ImageIcon(getClass().getResource("/vista/recursos/imagenes/logo.png"));
 		JLabel imagenLogo = new JLabel(iconoLogo);
 		imagenLogo.setBounds(-20, -30, 144, 142);
 		panelIzquierda.add(imagenLogo);
@@ -158,7 +158,7 @@ public class VistaRegistro {
 		nombre.setForeground(new Color(0, 0, 0, 90));
 		nombre.setBounds(80, 200, 300, 35);
 		nombre.setBackground(new Color(240, 240, 240));
-		nombre.setPrefixIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/user.png")));
+		nombre.setPrefixIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/user.png")));
 		panelDerecha.add(nombre);
 		
 		apellidos.setText("Apellidos");
@@ -166,7 +166,7 @@ public class VistaRegistro {
 		apellidos.setForeground(new Color(0, 0, 0, 90));
 		apellidos.setBounds(80, 260, 300, 35);
 		apellidos.setBackground(new Color(240, 240, 240));
-		apellidos.setPrefixIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/user.png")));
+		apellidos.setPrefixIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/user.png")));
 		panelDerecha.add(apellidos);
 		
 		txtCorreo.setText("Correo electronico");
@@ -174,14 +174,14 @@ public class VistaRegistro {
 		txtCorreo.setForeground(new Color(0, 0, 0, 90));
 		txtCorreo.setBounds(80, 320, 300, 35);
 		txtCorreo.setBackground(new Color(240, 240, 240));
-		txtCorreo.setPrefixIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/mail.png")));
+		txtCorreo.setPrefixIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/mail.png")));
 		panelDerecha.add(txtCorreo);
 
 		passCheckBox.setText("CheckBox1");
 		passCheckBox.setLocation(340, 385);
 		passCheckBox.setSize(24, 24);
 		passCheckBox.setOpaque(false);
-		passCheckBox.setIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/eye-closed.png")));
+		passCheckBox.setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye-closed.png")));
 		panelDerecha.add(passCheckBox);
 
 		txtContrasenia.setText("Contraseña");
@@ -190,14 +190,14 @@ public class VistaRegistro {
 		txtContrasenia.setFont(new Font("Inter", Font.PLAIN, 12));
 		txtContrasenia.setBounds(80, 380, 300, 35);
 		txtContrasenia.setBackground(new Color(240, 240, 240));
-		txtContrasenia.setPrefixIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/pass.png")));
+		txtContrasenia.setPrefixIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/pass.png")));
 		panelDerecha.add(txtContrasenia);
 		
 		passCheckBox2.setText("CheckBox1");
 		passCheckBox2.setLocation(340, 445);
 		passCheckBox2.setSize(24, 24);
 		passCheckBox2.setOpaque(false);
-		passCheckBox2.setIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/eye-closed.png")));
+		passCheckBox2.setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye-closed.png")));
 		panelDerecha.add(passCheckBox2);
 		
 		confirmarContrasenia.setText("Confirmar contraseña");
@@ -206,7 +206,7 @@ public class VistaRegistro {
 		confirmarContrasenia.setFont(new Font("Inter", Font.PLAIN, 12));
 		confirmarContrasenia.setBounds(80, 440, 300, 35);
 		confirmarContrasenia.setBackground(new Color(240, 240, 240));
-		confirmarContrasenia.setPrefixIcon(new ImageIcon(getClass().getResource("/recursos/imagenes/pass.png")));
+		confirmarContrasenia.setPrefixIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/pass.png")));
 		panelDerecha.add(confirmarContrasenia);
 		
 		

@@ -7,6 +7,7 @@ import modelo.Modelo;
 import vista.Vista;
 import vista.VistaPanelInicio;
 import vista.VistaRegistro;
+import vista.AccionesListeners.MetodosLog_Reg;
 
 
 public class Controlador implements ActionListener{
@@ -14,6 +15,8 @@ public class Controlador implements ActionListener{
 	public Vista nuevaVista;
 	public VistaRegistro vistaRegistro;
 	public VistaPanelInicio panelInicio;
+	
+	public MetodosLog_Reg metodos;
 	
 	public Modelo nuevoModelo;
 	public ControladorTXT controladorTXT;
@@ -27,6 +30,9 @@ public class Controlador implements ActionListener{
 		this.nuevaVista = new Vista();
 		this.nuevoModelo = new Modelo();
 		this.controladorTXT = new ControladorTXT(nuevaVista);
+		
+		this.metodos = new MetodosLog_Reg();
+		
 		nuevaVista.asignarActListner(this);
 	}
 	
@@ -50,7 +56,10 @@ public class Controlador implements ActionListener{
 	
 	// Metodo validacion Login
 	public void accionLogin() {
-		sesionIniciada = nuevoModelo.accionLogin(nuevaVista.getTxtCorreo().getText(), new String (nuevaVista.getTxtContrasenia().getPassword()), nuevaVista.getTxtCorreo(), nuevaVista.getTxtContrasenia());
+		if(metodos.loginValidado(new String (nuevaVista.getTxtContrasenia().getPassword()), nuevaVista.getTxtCorreo(),  nuevaVista.getTxtContrasenia())) {
+			sesionIniciada = nuevoModelo.accionLogin(nuevaVista.getTxtCorreo().getText(),new String (nuevaVista.getTxtContrasenia().getPassword()));
+		}
+		metodos.loginNoValido(nuevaVista.getTxtCorreo(), nuevaVista.getTxtContrasenia());
 	}	
 	
 	// Metodo validacion Registro

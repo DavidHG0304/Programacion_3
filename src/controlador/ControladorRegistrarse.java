@@ -54,7 +54,7 @@ public class ControladorRegistrarse implements ActionListener, FocusListener, Mo
 			nuevaVista.getTxtContrasenia().setEchoChar('*');
 			
 			String password = String.valueOf(nuevaVista.getTxtContrasenia().getPassword());
-			nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/imagenes/eye-closed.png")));
+			nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye-closed.png")));
 
 			if (password.toLowerCase().equals("contraseña")) {
 				nuevaVista.getTxtContrasenia().setText("");
@@ -65,7 +65,7 @@ public class ControladorRegistrarse implements ActionListener, FocusListener, Mo
 			nuevaVista.getConfirmarContrasenia().setEchoChar('*');
 			
 			String password = String.valueOf(nuevaVista.getConfirmarContrasenia().getPassword());
-			nuevaVista.getPassCheckBox2().setIcon(new ImageIcon(getClass().getResource("/imagenes/eye-closed.png")));
+			nuevaVista.getPassCheckBox2().setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye-closed.png")));
 
 			if (password.toLowerCase().equals("confirmar contraseña")) {
 				nuevaVista.getConfirmarContrasenia().setText("");
@@ -115,10 +115,10 @@ public class ControladorRegistrarse implements ActionListener, FocusListener, Mo
 			if (!contraseñaAux.equals("Contraseña")) {
 				if (nuevaVista.getPassCheckBox().isSelected()) {
 					nuevaVista.getTxtContrasenia().setEchoChar((char) 0);
-					nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/imagenes/eye.png")));
+					nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye.png")));
 				} else {
 					nuevaVista.getTxtContrasenia().setEchoChar('*');
-					nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/imagenes/eye-closed.png")));
+					nuevaVista.getPassCheckBox().setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye-closed.png")));
 				}
 			}
 		case "CheckBox2":
@@ -127,10 +127,10 @@ public class ControladorRegistrarse implements ActionListener, FocusListener, Mo
 			if (!confirmarContraseñaAux.equals("Confirmar contraseña")) {
 				if (nuevaVista.getPassCheckBox2().isSelected()) {
 					nuevaVista.getConfirmarContrasenia().setEchoChar((char) 0);
-					nuevaVista.getPassCheckBox2().setIcon(new ImageIcon(getClass().getResource("/imagenes/eye.png")));
+					nuevaVista.getPassCheckBox2().setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye.png")));
 				} else {
 					nuevaVista.getConfirmarContrasenia().setEchoChar('*');
-					nuevaVista.getPassCheckBox2().setIcon(new ImageIcon(getClass().getResource("/imagenes/eye-closed.png")));
+					nuevaVista.getPassCheckBox2().setIcon(new ImageIcon(getClass().getResource("/vista/recursos/imagenes/eye-closed.png")));
 				}
 			}
 		}
