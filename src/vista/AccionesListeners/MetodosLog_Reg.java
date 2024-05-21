@@ -23,12 +23,12 @@ public class MetodosLog_Reg {
 		// Valida si alguno de los espacios están vacios
 		if(txtCorreo.getText().equals("Correo electronico") || contrasenia.equals("Contraseña")){
 			if(txtCorreo.getText().equals("Correo electronico")) {
-				System.out.println("Campo correo Vacio");
+//				System.out.println("Campo correo Vacio");
 				txtCorreo.setColorB(new Color(217,0,30));
 				txtCorreo.repaint();
 			}
 			if(contrasenia.equals("Contraseña")) {
-				System.out.println("Campo contraseña Vacio");
+//				System.out.println("Campo contraseña Vacio");
 				passwordField.setColorB(new Color(217,0,30));
 				passwordField.repaint();
 			}
@@ -37,11 +37,14 @@ public class MetodosLog_Reg {
 		return true;
 	}
 	
-	public void loginNoValido(RoundJTextField txtCorreo, RoundJPasswordField passwordField) {
-		txtCorreo.setColorB(new Color(217,0,30));
-		txtCorreo.repaint();
-		passwordField.setColorB(new Color(217,0,30));
-		passwordField.repaint();
+	public void loginNoValido(String contrasenia, RoundJTextField txtCorreo, RoundJPasswordField passwordField) {
+		if(!txtCorreo.getText().equals("Correo electronico") && !contrasenia.equals("Contraseña")){
+			txtCorreo.setColorB(new Color(217,0,30));
+			txtCorreo.repaint();
+			passwordField.setColorB(new Color(217,0,30));
+			passwordField.repaint();
+		}		
+		
 	}
 	
 	public boolean registroValido(String contrasenia, String confirContrasenia, RoundJTextField nombreUsuario, RoundJTextField apellidoUsuario, RoundJTextField txtCorreo, RoundJPasswordField registrarContrasenia, RoundJPasswordField confirmarContrasenia) {
@@ -59,31 +62,31 @@ public class MetodosLog_Reg {
 		// Valida si no hay espacios vacios
 		if(nombreUsuario.getText().equals("Nombre") || apellidoUsuario.getText().equals("Apellidos") || txtCorreo.getText().equals("Correo electronico") || contrasenia.equals("Contraseña") || confirContrasenia.equals("Confirmar contraseña")){
 			if(nombreUsuario.getText().equals("Nombre")) {
-				System.out.println("Campo correo Vacio");
+//				System.out.println("Campo correo Vacio");
 				nombreUsuario.setColorB(new Color(217,0,30));
 				nombreUsuario.repaint();
 			}
 			
 			if(apellidoUsuario.getText().equals("Apellidos")) {
-				System.out.println("Campo correo Vacio");
+//				System.out.println("Campo correo Vacio");
 				apellidoUsuario.setColorB(new Color(217,0,30));
 				apellidoUsuario.repaint();
 			}
 			
 			if(txtCorreo.getText().equals("Correo electronico")) {
-				System.out.println("Campo correo Vacio");
+//				System.out.println("Campo correo Vacio");
 				txtCorreo.setColorB(new Color(217,0,30));
 				txtCorreo.repaint();
 			}
 			
 			if(contrasenia.equals("Contraseña")) {
-				System.out.println("Campo contraseña Vacio");
+//				System.out.println("Campo contraseña Vacio");
 				registrarContrasenia.setColorB(new Color(217,0,30));
 				registrarContrasenia.repaint();
 			}
 			
 			if(confirContrasenia.equals("Confirmar contraseña")) {
-				System.out.println("Campo confirmar contraseña Vacio");
+//				System.out.println("Campo confirmar contraseña Vacio");
 				confirmarContrasenia.setColorB(new Color(217,0,30));
 				confirmarContrasenia.repaint();
 			}
@@ -94,25 +97,25 @@ public class MetodosLog_Reg {
 		// Validar que los campos sean correctos
 		if (contrasenia.length() < 8 || !confirContrasenia.equals(contrasenia) || !esCorreoValido(txtCorreo.getText())) {
 			if(contrasenia.length() < 8) {
-				System.out.println("Contraseña debe ser mayor a 8 caracteres");
+//				System.out.println("Contraseña debe ser mayor a 8 caracteres");
 				registrarContrasenia.setColorB(new Color(217, 0, 30));
 				registrarContrasenia.repaint();
 			}
 			if(confirContrasenia.length() < 8) {
-				System.out.println("Contraseña debe ser mayor a 8 caracteres");
+//				System.out.println("Contraseña debe ser mayor a 8 caracteres");
 				confirmarContrasenia.setColorB(new Color(217,0,30));
 				confirmarContrasenia.repaint();
 			}
 			
 			if (!confirContrasenia.equals(contrasenia)) {
-				System.out.println("Contrasenias no coinciden");
+//				System.out.println("Contrasenias no coinciden");
 				registrarContrasenia.setColorB(new Color(217, 0, 30));
 				registrarContrasenia.repaint();
 				confirmarContrasenia.setColorB(new Color(217,0,30));
 				confirmarContrasenia.repaint();
 			}
 			if(!esCorreoValido(txtCorreo.getText())) {
-				System.out.println("El correo no es valido");
+//				System.out.println("El correo no es valido");
 				JOptionPane.showMessageDialog(null, "Formato Correo Invalido", "Rellene los campos", JOptionPane.ERROR_MESSAGE);
 				txtCorreo.setColorB(new Color(217,0,30));
 				txtCorreo.repaint();

@@ -1,6 +1,11 @@
 package vista;
 
 import javax.swing.*;
+import javax.swing.text.html.ImageView;
+
+import com.formdev.flatlaf.FlatIntelliJLaf;
+import com.formdev.flatlaf.FlatLightLaf;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.font.TextAttribute;
@@ -12,7 +17,7 @@ import vista.recursos.componentesPersonalizados.*;
 
 public class Vista {
 	private JFrame frame;
-	private JButton boton;
+	private RoundedBorder boton;
 	private RoundJTextField txtCorreo;
 	private RoundJPasswordField txtContrasenia;
 	private JCheckBox passCheckBox;
@@ -31,9 +36,11 @@ public class Vista {
 		passCheckBox = new JCheckBox();
 		txtCorreo = new RoundJTextField(35, 35);
 		txtContrasenia = new RoundJPasswordField(35, 35);
-		boton = new RoundedBorder(35);
+		boton = new RoundedBorder(35, true);
 		botonRegistrar = new JButton("Registrarse");
 	}
+	
+	
 	
 	public void login() {
 		// Creacion de paneles
@@ -89,7 +96,7 @@ public class Vista {
 //		JLabel papu = new JLabel();
 //		try
 //		{
-//			URL url = new URL("https://firebasestorage.googleapis.com/v0/b/fotinhoscarros.appspot.com/o/blazer.png?alt=media&token=fc5e32b0-24d5-4f48-ba06-18397780a543");
+//			URL url = new URL("https://firebasestorage.googleapis.com/v0/b/fotinhoscarros.appspot.com/o/xm.png?alt=media&token=532df335-a4ed-4d6c-a799-7786a38f5f23");
 //			BufferedImage image = ImageIO.read(url);
 //			image = ImageIO.read(url);
 //			papu = new JLabel(new ImageIcon(image));
@@ -117,12 +124,11 @@ public class Vista {
 		boton.setForeground(Color.WHITE);
 		boton.setFont(new Font("Inter", Font.PLAIN, 24));
 		boton.setBounds(100, 490, 250, 40);
+		boton.setBackground(new Color(33, 147, 246));
 		boton.setFocusPainted(false);
-		boton.setBackground(new Color(0,122,247));
 		boton.setBorderPainted(false);
 		boton.setContentAreaFilled(false);
 		boton.setFocusPainted(false);
-		boton.setOpaque(false);
 		panelIzquierda.add(boton);
 		
 		// lbl Iniciar sesion
@@ -221,10 +227,10 @@ public class Vista {
 		txtContrasenia.addFocusListener(fListener);
 	}
 	
-	public void asignarMouseClicked(MouseListener mListener) {
-		boton.addMouseListener(mListener);
-		botonRegistrar.addMouseListener(mListener);
-	}
+//	public void asignarMouseClicked(MouseListener mListener) {
+//		boton.addMouseListener(mListener);
+//		botonRegistrar.addMouseListener(mListener);
+//	}
 	
 	// Getters
 	public RoundJTextField getTxtCorreo() {
@@ -259,7 +265,7 @@ public class Vista {
 	public void setPassCheckBox(JCheckBox passCheckBox) {
 		this.passCheckBox = passCheckBox;
 	}
-	public void setBoton(JButton boton) {
+	public void setBoton(RoundedBorder boton) {
 		this.boton = boton;
 	}
 	public void setBotonRegistrar(JButton botonRegistrar) {

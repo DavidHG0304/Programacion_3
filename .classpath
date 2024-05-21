@@ -6,8 +6,14 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/JTattoo-1.6.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/mysql-connector-j-8.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/lib/flatlaf-intellij-themes-3.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/lib/mysql-connector-j-8.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/lib/swing-datetime-picker-1.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/lib/other/flatlaf-3.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/lib/other/flatlaf-extras-3.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/lib/other/jsvg-1.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/lib/other/miglayout-core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/git/BranchMainProg3/Programacion_3/lib/other/miglayout-swing.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -15,6 +15,7 @@ public class RoundedBorder extends JButton {
     private int borderRadius;
     private GradientPaint colorGradiant;
     private boolean aplicarGradiant = true;
+	private Color color = getBackground();
 
     public RoundedBorder(int borderRadius) {
     	super();
@@ -29,6 +30,13 @@ public class RoundedBorder extends JButton {
         setOpaque(false);
     }
     
+    public RoundedBorder(int borderRadius, boolean aplicarGradiant, Color color) {
+    	super();
+        this.borderRadius = borderRadius;
+        this.aplicarGradiant = aplicarGradiant;
+        this.color  = color;
+        setOpaque(false);  // Important for custom painting
+    }
     
 	public GradientPaint getColorGradiant() {
 		return colorGradiant;
@@ -48,10 +56,12 @@ public class RoundedBorder extends JButton {
 		((Graphics2D) g).setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g.drawRoundRect(0, 0, getWidth() - 1, height - 1, height, 100);
         super.paintComponent(g);
+        g.dispose();
     }
     protected void paintBorder(Graphics g) {
-        g.setColor(getForeground());
+        g.setColor(color);
         g.drawRoundRect(0, 0, getWidth()-1, getHeight()-1, borderRadius, borderRadius);
+        g.dispose();
         
     }
     public boolean contains(int x, int y) {
